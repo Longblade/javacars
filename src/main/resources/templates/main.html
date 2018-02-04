@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>VehicleService</title>
+</head>
+<body>
+<h1>Автомобили</h1>
+<a href="/vehicles">Все автомобили</a>
+<h2>Автомобили по типам</h2>
+<ul th:each="type : ${types}">
+    <li><a th:href="${'/vehicles/by_type/' + type.id}" th:text="${type.name}"></a></li>
+</ul>
+<h2>Автомобили по странам</h2>
+<ul th:each="country : ${countries}">
+    <li><a th:href="${'/vehicles/by_country/' + country.id}" th:text="${country.name}"></a></li>
+</ul>
+<h2>Автомобили по классу</h2>
+<ul th:each="klasse : ${klasses}">
+    <li><a th:href="${'/vehicles/by_klasse/' + klasse.id}" th:text="${klasse.name}"></a></li>
+</ul>
+<h2>Автомобили по кузову</h2>
+<ul th:each="carbody : ${carbodies}">
+    <li><a th:href="${'/vehicles/by_carbody/' + carbody.id}" th:text="${carbody.name}"></a></li>
+</ul>
+</body>
+</html>

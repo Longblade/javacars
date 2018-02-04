@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Автомобиль</title>
+</head>
+<body>
+<h1 th:text="${vehicle.name}"></h1>
+<table>
+    <tr>
+        <td>
+            Год:
+        </td>
+        <td th:text="${vehicle.year}"></td>
+    </tr>
+
+    <tr>
+        <td>
+            Мощность:
+        </td>
+        <td th:text="${vehicle.str}"></td>
+    </tr>
+
+    <tr>
+        <td>
+            Страна:
+        </td>
+        <td th:text="${vehicle.country.name}"></td>
+    </tr>
+
+    <tr>
+        <td>
+            Класс:
+        </td>
+        <td th:text="${vehicle.klasse.name}"></td>
+    </tr>
+
+    <tr>
+        <td>
+            Тип кузова:
+        </td>
+        <td th:text="${vehicle.carBody.name}"></td>
+    </tr>
+
+    <tr>
+        <td>
+            Тип:
+        </td>
+        <td th:text="${vehicle.type.name}"></td>
+    </tr>
+
+    <tr>
+        <td>
+            Цена:
+        </td>
+        <td th:text="${vehicle.price}"></td>
+    </tr>
+</table>
+</body>
+</html>
